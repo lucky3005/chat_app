@@ -8,15 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
-  Platform.isAndroid
-      ? await Firebase.initializeApp(
-          options: const FirebaseOptions(
-              apiKey: "AIzaSyABMdCo5i0PAYJjqs9ToagBEy5m-_KR01M",
-              appId: "1:130052790726:android:37f7cd3350659f405e3ac7",
-              messagingSenderId: "130052790726",
-              projectId: "cost-estimation-tool-b3f3f"),
-        )
-      : await Firebase.initializeApp();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
